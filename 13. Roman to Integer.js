@@ -36,6 +36,8 @@
     return total;
 };
 
+/***
+
 var result = romanToInt("MCMXCVI"); // 1996
 console.log(result);
 
@@ -43,4 +45,6 @@ var result2 = romanToInt("MMXXI"); // 2021
 console.log(result2);
 
 var result3 = romanToInt("MMMCMXCIX"); // 3999
-console.log(result3);
+console.log(result3); 
+
+**/
