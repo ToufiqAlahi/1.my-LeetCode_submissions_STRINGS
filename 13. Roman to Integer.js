@@ -20,16 +20,12 @@ var romanToInt = function (s) {
         if (nextInt) {
             if (currentInt >= nextInt) {
                 total += currentInt;
-
             } else {
                 total += (nextInt - currentInt);
                 i++;
-
             }
-
         } else {
             total += currentInt;
-
         }
 
     }
