@@ -1,23 +1,26 @@
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
 var isAnagram = function (s, t) {
     if (s.length !== t.length) {
         return false;
     }
+    const p = {};
 
-    const sCharCounts = {};
+    //Fill sCharCounts
     for (let i = 0; i < s.length; i++) {
-        const sChar = s[i];
-        sCharCounts[sChar] = sCharCounts[sChar] + 1 || 1;
+        const q = s[i];
+        p[q] = p[q] + 1 || 1;
     }
-
     for (let i = 0; i < t.length; i++) {
-        const tChar = t[i];
-
-        if (!sCharCounts[tChar]) {
+        const r = t[i];
+        if (!p[r]) {
             return false;
         } else {
-            sCharCounts[tChar]--;
+            p[r]--;
         }
-
     }
     return true;
 };
