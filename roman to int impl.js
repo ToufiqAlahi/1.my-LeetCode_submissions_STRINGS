@@ -1,7 +1,3 @@
-/**
- * @param {string} s
- * @return {number}
- */
 var romanToInt = function (s) {
     let romanToInt = {
         I: 1,
@@ -12,22 +8,34 @@ var romanToInt = function (s) {
         D: 500,
         M: 1000
     };
+
     let total = 0;
+
     for (let i = 0; i < s.length; i++) {
+
         let currentInt = romanToInt[s.charAt(i)];
+
         let nextInt = romanToInt[s.charAt(i + 1)];
 
         if (nextInt) {
+
             if (currentInt >= nextInt) {
+
                 total += currentInt;
 
-            } else {
+            } 
+            
+            else {
+
+
                 total += (nextInt - currentInt);
+
                 i++;
 
             }
 
         } else {
+
             total += currentInt;
 
         }
@@ -35,6 +43,7 @@ var romanToInt = function (s) {
     }
     return total;
 };
+
 
 var result = romanToInt("MCMXCVI"); // 1996
 console.log(result);
